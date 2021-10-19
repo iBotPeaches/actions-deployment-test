@@ -1,0 +1,29 @@
+name: test
+on: push
+
+jobs:
+  archive:
+    name: archive
+    runs-on: ubuntu-latest
+    steps:
+      - name: File
+        run: touch cat
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: cat
+          path: cat
+
+  deploy:
+    environment:
+      name: test
+      url: https://sourcetoad.com
+    name: Deployment
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Deploy
+        run: echo DEPLOYING
