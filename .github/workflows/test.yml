@@ -28,16 +28,16 @@ jobs:
       - name: Deploy
         run: echo DEPLOYING
 
-    deploy2:
-      environment:
-        name: test2
-        url: https://sourcetoad.com
-      name: Deployment
-      runs-on: ubuntu-latest
+  deploy2:
+    environment:
+      name: test2
+      url: https://sourcetoad.com
+    name: Deployment
+    runs-on: ubuntu-latest
 
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-        - name: Deploy
-          run: echo DEPLOYING
+      - name: Deploy
+        run: echo DEPLOYING
