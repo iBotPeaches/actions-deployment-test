@@ -19,6 +19,7 @@ jobs:
       name: test
       url: https://sourcetoad.com
     name: Deployment
+    needs: [archive]
     runs-on: ubuntu-latest
 
     steps:
@@ -33,6 +34,7 @@ jobs:
       name: test2
       url: https://sourcetoad.com
     name: Deployment
+    needs: [archive]
     runs-on: ubuntu-latest
 
     steps:
